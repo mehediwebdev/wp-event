@@ -44,6 +44,9 @@ if (!class_exists('WPH_Event')) {
 
             require_once( WPH_EVENT_PATH . 'inc/class.enqueue.php' );
             $wph_event_enquue = new WPH_Event_Enqueue();
+
+            require_once( WPH_EVENT_PATH . 'inc/class.wph_event_column.php' );
+            $wph_event_column = new WPH_Event_Column();
         }
 
      
