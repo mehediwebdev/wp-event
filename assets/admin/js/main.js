@@ -1,6 +1,25 @@
 // alert('Custom script loaded!');
-(function($) {
+// (function($) {
+
+//     jQuery( "#datepicker" ).datepicker();
+
+// })(jQuery);
 
 
 
-})(jQuery);
+
+
+
+
+
+
+
+
+
+
+jQuery(document).ready(function ($) {
+
+   
+    jQuery( "#datepicker" ).datepicker();
+
+});

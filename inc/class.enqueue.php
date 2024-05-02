@@ -16,8 +16,12 @@ if ( !class_exists( 'WPH_Event_Enqueue' ) ) {
 			//global $typenow;
 			//if( $typenow == 'wph-event'){
 			 wp_enqueue_style( 'wph-event-main-css', WPH_EVENT_URL . 'assets/admin/css/style.css' );
+             wp_enqueue_style( 'wph-event-js-ui-css', WPH_EVENT_URL . 'assets/admin/vendor/jquery-ui.css' );
              wp_enqueue_script( 'wph-event-main-js', WPH_EVENT_URL . 'assets/admin/js/main.js' );
 			//}
+
+        
+            wp_enqueue_script( 'wph-event-jsui-js', WPH_EVENT_URL . 'assets/admin/vendor/jquery-ui.js' );
     }
 }
 
