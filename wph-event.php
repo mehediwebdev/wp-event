@@ -47,6 +47,10 @@ if (!class_exists('WPH_Event')) {
 
             require_once( WPH_EVENT_PATH . 'inc/class.wph_event_column.php' );
             $wph_event_column = new WPH_Event_Column();
+
+            
+            require_once( WPH_EVENT_PATH . 'inc/class.wph-event-dashboard.php' );
+            $wph_event_dashboard = new WPH_Event_Dashboard();
         }
 
      

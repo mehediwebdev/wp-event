@@ -22,6 +22,7 @@ if ( !class_exists( 'WPH_Event_Enqueue' ) ) {
 
         
             wp_enqueue_script( 'wph-event-jsui-js', WPH_EVENT_URL . 'assets/admin/vendor/jquery-ui.js' );
+            wp_enqueue_script( 'wph-event-calender-js', WPH_EVENT_URL . 'assets/admin/vendor/index.global.js' );
     }
 }
 
