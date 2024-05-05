@@ -51,6 +51,9 @@ if (!class_exists('WPH_Event')) {
             
             require_once( WPH_EVENT_PATH . 'inc/class.wph-event-dashboard.php' );
             $wph_event_dashboard = new WPH_Event_Dashboard();
+
+         add_filter( 'archive_template', array( $this, 'load_custom_archive_template' ) );
+		 add_filter( 'single_template', array( $this, 'load_custom_single_template' ) );
         }
 
      
@@ -63,7 +66,28 @@ if (!class_exists('WPH_Event')) {
            
         }
 
-       
+        public function load_custom_archive_template( $tpl ){
+            $tpl = WPH_EVENT_PATH . 'views/templates/archive-wph-event.php';
+            if( current_theme_supports( 'wph-event' ) ){
+              if( is_post_type_archive( 'wph-event' )){
+                  $tpl = $this->get_template_part_location( 'archive-wph-event.php' );
+              }
+            }
+              
+              return $tpl;
+           }
+
+
+      	 public function load_custom_single_template( $tpl ){
+            $tpl = WPH_EVENT_PATH . 'views/templates/single-wph-event.php';
+			if( current_theme_supports( 'wph-event' ) ){
+			  if( is_singular( 'mv-event' )){
+				  $tpl = $this->get_template_part_location( 'single-wph-event.php' );
+			  }
+			}
+			  
+			  return $tpl;
+		   }
   
 
     }
